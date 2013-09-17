@@ -137,7 +137,6 @@ a:hover {
 
 	*[data-tip]:after {
 		content: ' (' attr(data-tip) ')';
-		border-bottom: none;
 		font-size: .8em;
 	}
 
