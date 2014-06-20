@@ -21,16 +21,16 @@ html, body {
 
 body {
 	font-size: 14px;
-	line-height: 1.428;
+	line-height: 1.7;
 	font-family: 'Open Sans', sans-serif, 'Helvetica Neue', Helvetica, arial;
 }
 
 a {
 	color: #02779E;
 	text-decoration: underline;
+	transition: color .3s;
 	-moz-transition: color .3s;
 	-webkit-transition: color .3s;
-	transition: color .3s;
 }
 
 a:hover {
@@ -44,9 +44,9 @@ a:hover {
 }
 
 #social {
+	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-	user-select: none;
 }
 
 #social div {
@@ -61,9 +61,6 @@ a:hover {
 }
 
 #social img {
-	/*filter: grayscale(100%);
-	-moz-filter: -moz-grayscale(100%);
-	-webkit-filter: -webkit-grayscale(100%);*/
 	transition: all .1s;
 	-moz-transition: all .1s;
 	-webkit-transition: all .1s;
@@ -71,10 +68,6 @@ a:hover {
 
 #social a:hover img {
 	opacity: 1;
-	/*filter: grayscale(0%);
-	-moz-filter: -moz-grayscale(0%);
-	-webkit-filter: -webkit-grayscale(0%);*/
-	/*background-color: #ffffff;*/
 }
 
 .content {
@@ -90,9 +83,7 @@ a:hover {
 }
 
 #eyes {
-	background-image: url(../img/eyes.png);
-	background-repeat: no-repeat;
-	background-position: center center;
+	background: url('../img/eyes.png') no-repeat center center;
 	height: 209px;
 }
 
@@ -147,12 +138,11 @@ a:hover {
 	*[data-tip]:hover:before {
 		position: absolute;
 		content: ' ';
-		bottom: -3px;
+		bottom: -8px;
 		z-index: 3;
 		left: 15px;
-		left: max(calc(100% - 4px), 15px);
-		width: 0px;
-		height: 0px;
+		width: 0;
+		height: 0;
 		border-style: solid;
 		border-width: 0 5px 5px 5px;
 		border-color: transparent transparent
@@ -162,20 +152,19 @@ a:hover {
 	*[data-tip]:hover:after {
 		position: absolute;
 		top: 100%;
-		top: calc(100% + 3px);
 		left: 0;
 		z-index: 2;
 		display: block;
 		padding: 5px 9px 6px;
 		font-size: 13px;
+        line-height: 20px;
 		box-shadow: 0 0 6px rgba(255, 255, 255, .4);
 		content: attr(data-tip);
 		background-color: rgba(51, 51, 51, .95);
 		color: #ffffff;
 		border-radius: 2px;
-		-moz-border-radius: 2px;
-		-webkit-border-radius: 2px;
 		white-space: nowrap;
+        margin-top: 7px;
 	}
 
 }
@@ -184,7 +173,7 @@ a:hover {
 	float: right;
 }
 
-.float-left: {
+.float-left {
 	float: left;
 }
 
